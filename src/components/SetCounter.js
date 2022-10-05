@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { INCREASE, DECREASE } from "../store/types/counter";
 
 export const SetCounter = () => {
   const dispatch = useDispatch();
@@ -7,9 +8,9 @@ export const SetCounter = () => {
   const setter = (indicator) => {
     if (indicator === "+") {
       // increase
-      dispatch({ type: "INCREASE", payload: counter.counter + 1 });
+      dispatch({ type: INCREASE, payload: counter.counter + 1 });
     } else if (indicator === "-") {
-      dispatch({ type: "DECREASE", payload: counter.counter - 1 });
+      dispatch({ type: DECREASE, payload: counter.counter - 1 });
       // decrease
     }
   };
