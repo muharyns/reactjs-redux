@@ -21,7 +21,7 @@ export const Content = ({ idx, id, item, handleRemove, handleEdit }) => {
           <Button
             color="secondary"
             size="small"
-            onClick={() => handleRemove(idx)}
+            onClick={() => handleRemove(id)}
           >
             <CloseIcon color="error" />
           </Button>
